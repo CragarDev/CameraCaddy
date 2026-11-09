@@ -1,293 +1,273 @@
-### Camera Caddy
+
+# Camera Caddy 🎥
 
 ![Camera Caddy Logo](assets/03_fbm_port_cameraCaddy_med.png)
 
+**A Python-powered Blender add-on for managing multiple cameras and simplifying 3D production workflows.**
+
+Camera Caddy helps Blender users create, organize, switch, and configure cameras directly from a custom interface in the 3D Viewport.
+
+I developed Camera Caddy using Python and Blender's API, combining my experience in animation and video production with software development to solve practical workflow problems.
+
+**Technologies:** Python · Blender API · Custom UI Development · 3D Production Automation
+
+<p align="left">
+  <img
+    src="https://github.com/user-attachments/assets/605fc5c2-2c50-4aea-8da0-7423fc4f4d4d"
+    alt="Camera Caddy add-on panel in Blender"
+    width="300"
+  >
+</p>
 
 ---
 
-## **Overview**
+## 🎬 Video Demonstrations
 
-# Welcome to the Camera Caddy! 
-### Works with Blender Versions 2.8 to 4.2
+- [Installation Tutorial](https://youtu.be/P4zxviWVIZ8)
+- [Camera Caddy Walkthrough](https://youtu.be/WQvY06sDCAI)
 
-This document provides comprehensive instructions on how to install, configure, and use Camera Caddy — a Blender addon designed to simplify camera management in your 3D projects.
+## 🛒 Get Camera Caddy
 
-## **Video Tutorials**
-- [Installation Video](https://youtu.be/P4zxviWVIZ8) 
+Camera Caddy is available for **$12.99 USD** on Superhive (formerly Blender Market).
+
+**[View Camera Caddy on Superhive](https://superhivemarket.com/products/camera-caddy)**
+
+---
+
+## ✨ Features
+
+- **Camera management:** Create, select, organize, and remove cameras.
+- **Camera switching:** Change the active scene camera from a dropdown.
+- **Timeline integration:** Assign cameras to timeline frames using markers.
+- **Transform controls:** Adjust camera position and rotation.
+- **Camera configuration:** Set focal length, f-stop, and depth-of-field options.
+- **Focus controls:** Select a focus object or configure focus distance.
+- **Viewport integration:** Access Camera Caddy from Blender's N-panel.
+
+---
+
+## 🧩 Blender Compatibility
+
+Camera Caddy includes two implementations:
+
+| Camera Caddy Version | Blender Compatibility |
+|---|---|
+| v1.0.0 — Legacy Add-on | Blender 2.83–4.1.1 (documented) |
+| v2.0.0 — Extension Format | Blender 4.2 minimum; personally confirmed working in 5.1.2 |
+
+**Latest confirmed working Blender version: 5.1.2**
+
+Camera Caddy v2.0.0 has been tested and confirmed working in Blender 5.1.2 without requiring changes to the add-on.
+
+The minimum Blender version declared in the v2 extension manifest is 4.2.0. The table does not imply every intermediate Blender release has been individually tested.
+
+**Source code:**
+
+- [Camera Caddy v1](camera_caddy_v1/)
+- [Camera Caddy v2](camera_caddy_v2/)
+
+---
+
+## 📦 Installation
+
+Download the appropriate Camera Caddy package from your purchase on Superhive.
+
+### Blender 2.83–4.1 (Legacy Add-on)
+
+1. Open Blender.
+2. Navigate to **Edit → Preferences → Add-ons**.
+3. Select the option to install an add-on.
+4. Choose the `camera_caddy_v1.zip` package.
+5. Enable Camera Caddy in the add-on preferences.
+6. Save your preferences.
+7. Return to the 3D Viewport and press **N** to open the sidebar.
+
+### Blender 4.2 and Newer (Extension Format)
+
+1. Open Blender.
+2. Navigate to **Edit → Preferences → Get Extensions** or the extension installation area for your Blender version.
+3. Select **Install from Disk**.
+4. Choose the `camera_caddy_v2.zip` package.
+5. Enable Camera Caddy if necessary.
+6. Save your preferences.
+7. Open the 3D Viewport sidebar by pressing **N**.
+
+The exact preferences layout may vary between Blender releases.
+
+For a visual walkthrough, watch the [installation tutorial](https://youtu.be/P4zxviWVIZ8).
+
+---
+
+## 🚀 Getting Started
+
+### Access Camera Caddy
+
+Open Blender's 3D Viewport and press **N** to display the sidebar.
+
+Select the **Camera Caddy** tab.
+
+### Add a Camera
+
+1. Position the viewport at your desired camera angle.
+2. Click **Add Camera** in the Camera Caddy panel.
+3. Enter a camera name, focal length, and f-stop.
+4. Confirm the settings.
+
+Camera Caddy adds the camera to a collection named `Cameras`, makes it active, and switches to camera view.
+
+### Switch Cameras
+
+Open the camera dropdown and select the camera you want to activate.
+
+The active camera is identified by a green icon.
+
+### Delete a Camera
+
+Use the trash icon beside a non-active camera in the camera dropdown.
+
+---
+
+## 🎞️ Timeline Camera Management
+
+Camera Caddy provides tools for organizing camera changes along Blender's timeline.
+
+### Assign a Camera to a Frame
+
+1. Select the camera you want to use.
+2. Click the film icon beside that camera.
+3. Choose a frame in the popup.
+4. Confirm the selection.
+
+A marker with the camera's name is added at the selected frame.
+
+### Manage Camera Markers
+
+- **Move a marker:** Select and drag it to another frame.
+- **Delete a marker:** Select it, press **X**, and confirm.
+- **Preview shots:** Arrange camera markers at specific frames to inspect different camera angles.
+
+This workflow can simplify shot planning, scene previews, and multi-camera animation setups.
+
+---
+
+## 📷 Camera Controls
+
+### Position and Rotation
+
+Adjust camera location and rotation using the controls in the Camera Caddy panel.
+
+### Lock Camera to View
+
+Enable **Lock Camera to View** to reposition the active camera through viewport navigation.
+
+The lock is automatically disabled when switching cameras.
+
+### Depth of Field
+
+Use Camera Caddy's depth-of-field controls to enable or disable depth of field.
+
+Focus options include:
+
+- Selecting an object to focus on
+- Setting a specific focus distance
+
+---
+
+## 💡 Tips & Best Practices
+
+- Use descriptive camera names when working with multiple shots.
+- Arrange camera markers to organize scene timing.
+- Use one-frame intervals to preview alternative camera angles.
+- Save your Blender project before making substantial scene changes.
+
+---
+
+## ❓ Frequently Asked Questions
+
+### What is Camera Caddy?
+
+Camera Caddy is a Python add-on for Blender that provides tools for creating, switching, organizing, and configuring multiple cameras in a 3D scene.
+
+### Where can I find the add-on after installation?
+
+Open Blender's 3D Viewport and press **N**. Select the Camera Caddy tab in the sidebar.
+
+### Can I delete cameras?
+
+Yes. Camera Caddy allows you to delete non-active cameras through its camera dropdown.
+
+### Can I assign cameras to timeline frames?
+
+Yes. Use the film icon beside a camera to place a corresponding camera marker at a selected frame.
+
+### Can I adjust depth of field?
+
+Yes. Camera Caddy includes depth-of-field controls and focus settings.
+
+### Does Camera Caddy work in Blender 5.1.2?
+
+Yes. Camera Caddy v2.0.0 has been confirmed working in Blender 5.1.2.
+
+### Where can I purchase Camera Caddy?
+
+Camera Caddy is available on [Superhive](https://superhivemarket.com/products/camera-caddy).
+
+---
+
+## 🔧 Troubleshooting
+
+### Camera Caddy does not appear in the sidebar
+
+Check that the add-on is enabled under Blender's preferences.
+
+If necessary, restart Blender and reopen the 3D Viewport.
+
+### Camera markers are not appearing
+
+Verify that the correct camera and frame are selected, then use the film icon to assign the camera to that frame.
+
+### Installation fails
+
+Confirm that the installation package corresponds to your Blender version and that the ZIP archive is valid.
+
+Refer to the installation video for additional guidance.
+
+---
+
+## 📚 Documentation & Support
+
+- [Camera Caddy on Superhive](https://superhivemarket.com/products/camera-caddy)
+- [Camera Caddy Repository](https://github.com/CragarDev/CameraCaddy)
+- [Installation Video](https://youtu.be/P4zxviWVIZ8)
 - [Walkthrough Video](https://youtu.be/WQvY06sDCAI)
 
-## **Table of Contents**
+For development questions or project inquiries, contact:
 
-1. [Installation](#installation)
-2. [Accessing Camera Caddy](#accessing-camera-caddy)
-3. [Adding a Camera](#adding-a-camera)
-4. [Managing Cameras](#managing-cameras)
-   - [Active Camera Overview](#active-camera-overview)
-   - [Switching Between Cameras](#switching-between-cameras)
-   - [Deleting Cameras](#deleting-cameras)
-5. [Animating Cameras](#animating-cameras)
-   - [Setting Up Animated Camera Transitions](#setting-up-animated-camera-transitions)
-   - [Managing Camera Markers](#managing-camera-markers)
-6. [Adjusting Camera Settings](#adjusting-camera-settings)
-   - [Transform Controls](#transform-controls)
-   - [Depth of Field](#depth-of-field)
-7. [Tips & Best Practices](#tips--best-practices)
-8. [FAQ](#faq)
-9. [Trouble Shooting](#troubleshooting)
-10. [Support](#support)
-11. [Changelog](#changelog)
-
+**cragardev@gmail.com**
 
 ---
 
-## **Installation**
+## 📋 Version Information
 
-1. **Download the Add-On:**
-   - Purchase and download Camera Caddy from [link to purchase page](coming soon!).
-   
-2. **Install the Add-On: (select your Blender version)**
-   ## Blender Versions 2.8 to 4.1
-   #### Video Instillation Guide: [Link to video guide] #This will be a link to a video guide on how to install the addon.
-   1. Download the camera_caddy_v1.zip file from the purchase link.
-   2. Open Blender and go to **Edit** >>> **Preferences** >>> **Add-ons**.
-   3. In the top right corner, click the  **Install an add-on** button.
-   4. Navigate to the camera_caddy_v1.zip file that you downloaded, select it and click **Install Add-on**.
-   5. Once installed, enable Camera Caddy by checking the **Enable add-on** box next to its name.
-   6. Click **Save Preferences** to keep it enabled for future sessions.
-   7. Access Camera Caddy from the N-Panel in the 3D Viewport.
-  
-   ## Blender Version 4.2
-   #### Video Instillation Guide: [Link to video guide]
-   1. Download the camera_caddy_v2.zip file from the purchase link.
-   2. Open Blender and go to **Edit** >>> **Preferences** >>> **Get Extensions**.
-   3. Click the dropdown menu in the top right hand corner and scroll down to select **Install from disk**.
-   4. Navagate to the location of your camera_caddy_v2.zip file.
-   5. Select it and click **Install from disk**. 
-   6. Once installed, Camera Caddy should be enabled by default.
-   7. If Camera Caddy is not enabled, go to the **Add-ons** section in your preferences and check the **Enable add-on** box next to its name to enable it.
-   8. Click **Save Preferences** to keep it enabled for future sessions.
-   9. Access Camera Caddy from the N-Panel in the 3D Viewport.
+The repository contains two Camera Caddy implementations:
 
+- **v1.0.0:** Original Blender add-on with a declared minimum Blender version of 2.83.
+- **v2.0.0:** Updated Blender extension format with a declared minimum Blender version of 4.2.
 
-3. **Save Preferences:**
-   - Click **Save Preferences** to ensure Camera Caddy is available every time you start Blender.
+Camera Caddy v2.0.0 has also been personally tested and confirmed working in Blender 5.1.2.
+
+These version numbers come from the source metadata. A separate, verified GitHub release history has not been established.
 
 ---
 
-## **Accessing Camera Caddy**
+## 👨‍💻 About the Developer
 
-1. Open Blender and go to the **3D Viewport**.
-2. Press **N** to open the N-Panel on the right side of the viewport.
-3. You will find **Camera Caddy** listed as a tab in the N-Panel.
+Camera Caddy was independently developed by Craig Burke, a software developer with a background in video production, motion graphics, animation, and creative technology.
 
----
+The project demonstrates Python scripting, Blender API integration, interface development, and practical workflow automation.
 
-## **Adding a Camera**
-
-1. **Position the Viewport:**
-   - Move your viewport to the desired angle where you want the camera to be placed.
-   
-2. **Add a New Camera:**
-   - In the Camera Caddy panel, click the **Add Camera** button.
-   - A pop-up menu will appear, allowing you to:
-     - **Name your camera**
-     - **Set the Focal Length**
-     - **Set the F-Stop**
-   - After setting your preferences, the camera will be added to a collection called "Cameras", set as the active camera and camera view will be toggled on.
+[GitHub Profile](https://github.com/CragarDev) · [LinkedIn](https://www.linkedin.com/in/cragardev/) · [Developer Portfolio](https://craigburke-portfolio.netlify.app)
 
 ---
 
-## **Managing Cameras**
-
-### **Active Camera Overview**
-
-- The active camera is automatically displayed in the Camera Caddy panel.
-- This overview allows you to quickly see and manage which camera is currently active.
-
-### **Switching Between Cameras**
-
-1. **Open the Camera Switching Dropdown:**
-   - In the Camera Caddy panel, click the **Camera Switching Dropdown**.
-   - You’ll see a list of all available cameras in your scene.
-   
-2. **Switch Cameras:**
-   - Click on any camera in the list to make it the active camera.
-   - The active camera is highlighted with a green icon.
-
-### **Deleting Cameras**
-
-1. **Delete a Non-Active Camera:**
-   - In the Camera Switching Dropdown, click the **Trashcan icon** next to any non-active camera to delete it from your scene.
-
----
-
-## **Animating Cameras**
-
-### **Setting Up Animated Camera Transitions**
-
-1. **Bind a Camera to the Timeline:**
-   - In the Camera Switching Dropdown, click the **Film icon** next to the active camera.
-   - A pop-up menu will appear, allowing you to select a frame on the timeline, by default the current frame will be selected.
-   - Once selected, a marker with the camera's name will be placed on the timeline at that frame.
-
-### **Managing Camera Markers**
-
-1. **Move Camera Markers:**
-   - Select the marker on the timeline and drag it to the desired frame.
-
-2. **Delete Camera Markers:**
-   - Select the marker, press **X**, and confirm the deletion.
-
-3. **Preview Shots:**
-   - Set up markers at specific intervals to preview different camera angles efficiently, this can make for quick camera view renders by setting each camera at 1 frame inervals, then render animation for only those frames.
-
----
-
-## **Adjusting Camera Settings**
-
-### **Transform Controls**
-
-1. **Adjust Location and Rotation:**
-   - Use the **Transform controls** in the Camera Caddy panel to adjust the camera’s XYZ location and rotation.
-
-2. **Lock Camera to View:**
-   - Click the **Lock Camera to View** button to dynamically reposition your camera as you move in the viewport.
-   - This option is automatically disabled when you switch cameras.
-
-### **Depth of Field**
-
-1. **Toggle Depth of Field:**
-   - Click the **Depth of Field** button to turn depth of field on or off.
-
-2. **Focus Settings:**
-   - Choose a specific object to focus on or set an exact focus distance.
-
----
-
-## **Tips & Best Practices**
-
-- **Descriptive Camera Names:** Always name your cameras descriptively to easily manage them in complex scenes.
-- **Use Markers:** When animating, use timeline markers to keep track of camera transitions.
-- **Preview Before Rendering:** Set up preview shots using one-frame intervals to quickly assess different angles.
-
----
-
-# **FAQ**
-
-Welcome to the Camera Caddy Frequently Asked Questions! 
-Here you’ll find answers to the most common questions about using Camera Caddy. 
-If you don’t find the answer you’re looking for, please feel free to contact us through the support channels listed at the bottom of the page.
-
----
-
-### **What is Camera Caddy?**
-
-Camera Caddy is a Blender add-on designed to simplify the management of multiple cameras within a 3D scene. It provides intuitive tools for adding, switching, animating, and adjusting cameras, making it easier to control camera movements and settings.
-
-### **How much does Camera Caddy cost?**
-
-Camera Caddy is available for purchase at $12.99 USD.
-You can purchase it from here: [Link to purchase page](coming soon!)
-
-### **Is Camera Caddy compatible with all versions of Blender?**
-
-Camera Caddy 1.0.0 is compatible with Blender versions 2.8 up to 4.1.1. and 
-Camera Caddy 2.0.0 works in Blender 4.2.0
-We recommend using the latest stable version of Blender for the best experience
-
-### **I’m having trouble installing the add-on. What should I do?**
-
-f you encounter issues during installation, ensure that you are using the correct version of Camera Caddy for the specific version of Blender
-For Blender 2.8 to 4.1 use camera_caddy_v1.zip and for Blender 4.2.0 and above use camera_caddy_v2.zip.
-Also, make sure that the .zip file is not corrupted. If the problem persists, refer to our online [installation guide](https://www.fishblademedia.com/inner-page_cameraCaddyDocs_userManual.html) or [Installation Video](https://youtu.be/P4zxviWVIZ8) or  contact [support@fishblade.com](support@fishblade.com).
-
-### **Where can I find Camera Caddy after installation?**
-
-After installation, you can find Camera Caddy in the N-Panel of the 3D Viewport. Press **N** to open the panel, and look for the **Camera Caddy** tab.
-
-### **How do I add a new camera using Camera Caddy?**
-
-1. Position the viewport to the desired angle.
-2. Open the Camera Caddy tab in the N-Panel.
-3. Click the **Add Camera** button.
-4. Name your camera and set the focal length and f-stop in the pop-up menu.
-5. The new camera will be added to a collection called "Cameras" and set as the active camera.
-
-### **How do I switch between cameras?**
-
-Use the **Camera Switching Dropdown** in the Camera Caddy panel. Click on the camera you want to activate from the list, and it will become the active camera, indicated by a green icon.
-
-### **Can I delete cameras using Camera Caddy?**
-
-Yes, you can delete any non-active cameras. Simply click the **Trashcan icon** next to the camera you want to delete in the Camera Switching Dropdown.
-
-### **How do I set up animated camera transitions?**
-
-1. Click the **Film icon** next to the active camera in the Camera Switching Dropdown.
-2. Select the frame on the timeline where you want the camera transition to occur.
-3. A marker with the camera's name will appear on the timeline, allowing for smooth multi-camera animations.
-
-### **Can I move or delete camera markers on the timeline?**
-
-Yes, you can freely move markers by dragging them to a new position on the timeline. To delete a marker, select it, press **X**, and confirm the deletion.
-
-### **How do I adjust the focal length and f-stop?**
-
-In the Camera Caddy panel, use the **Transform controls** to adjust the focal length and f-stop of the active camera.
-
-### **How do I toggle depth of field on or off?**
-
-Click the **Depth of Field** button in the Camera Caddy panel. You can then choose to focus on a specific object or set a precise focus distance.
-
-### **What does the 'Lock Camera to View' button do?**
-
-The **Lock Camera to View** button allows you to dynamically reposition your camera by moving the viewport. The lock is automatically disabled when you switch cameras.
-
----
-
-## **Troubleshooting**
-
-### **Why can’t I see the Camera Caddy panel in my N-Panel?**
-
-Ensure that the add-on is enabled in your Blender preferences. Go to **Edit** > **Preferences** > **Add-ons** and verify that Camera Caddy is checked. If it still doesn’t appear, try restarting Blender.
-
-### **My camera markers aren’t showing up on the timeline. What should I do?**
-
-Make sure you’ve selected the correct frame and that the camera is bound to that frame using the **Film icon**. If the issue persists, try resetting your timeline or contacting support.
-
-### **Who do I contact for support?**
-
-For support, please reach out via [support@fishblade.com](support@fishblade.com).
-
----
-
-## **Support**
-
-If you encounter any issues or need further assistance, please refer to the following resources:
-
-- **Support Email:** [support@fishblade.com](support@fishblade.com)
-- **Documentation: User Manual:** [[User Manual - Online](http://192.168.1.113:5501/inner-page_cameraCaddyDocs_userManual.html)]
-- **Documentation: Online FAQ:** [[Frequently Asked Questions - Online](http://192.168.1.113:5501/inner-page_cameraCaddyDocs_faq.html)]
-- **Video:** [[Installation Video](https://youtu.be/P4zxviWVIZ8)]
-- **Video:** [[Walkthrough Video](https://youtu.be/WQvY06sDCAI)]
-
-
----
-
-## **Changelog**
-
-### Version 1.2.0
-
-- Converted to work with Blender version 4.2.0.
-
-### Version 1.1.0
-
-- Initial release, works with Blender versions 2.8 - 4.1.
-
----
-
-Thank you for choosing Camera Caddy! We hope it enhances your Blender experience.
-
----
-
-This manual is structured to provide clear, step-by-step instructions on using Camera Caddy, ensuring that users can easily access and utilize all of its features.
+*Camera Caddy — Making multi-camera workflows simpler.*
